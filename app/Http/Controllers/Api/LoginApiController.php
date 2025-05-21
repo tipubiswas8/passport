@@ -27,7 +27,7 @@ class LoginApiController extends Controller
             // Auth::loginUsingId($user->id);
             // $user = User::find($auth->id);
             $token = $user->createToken('Access Token')->accessToken;
-            return response()->json($token);
+            return response()->json(['user' => $user, 'token' => $token]);
         } else {
             return response()->json(['failed' => 'Invalid username or password']);
         }

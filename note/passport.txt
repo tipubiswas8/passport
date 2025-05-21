@@ -1,0 +1,11 @@
+
+after composer update
+----------------------
+
+
+need to tun this commend
+----------------------------
+php artisan migrate:fresh
+php artisan db:seed
+php artisan passport:keys
+php artisan passport:client --personal
